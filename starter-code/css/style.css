@@ -28,7 +28,6 @@ input {
   -ms-user-select: none;
   user-select: none;
   background-image: none;
-  border: 1px solid transparent;
   border-radius: 4px;
 }
 
@@ -52,15 +51,16 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .newItem {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
 }
 
-.newItem form {
-  padding-right: 30px;
-}
 
 .calculate {
   display: flex;

@@ -6,70 +6,78 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <script type="text/javascript" src="./js/index.js"></script>
   <title>Ironhack cart</title>
 </head>
 <body>
-
-  <h1>Ironhack Merchandising Shop</h1>
-  <div class="item">
-    <div>
+  <div class="container">
+  <div class="row">
+    <h1>Ironhack Merchandising Shop</h1>
+  </div>
+  
+  <div class="item row">
+    <div class="col-lg-2">
       <span class="productName">Ironhack T-Shirt</span>
     </div>
-    <div>
+    <div class="col-lg-2">
         $<span class="costPerUnit">20.00</span>
     </div>
-    <div>
-      <form>
-        QTY <input class="itemQuantity" type="text" name="quantity">
-      </form>
+    <div class="col-lg-4">
+      QTY <input class="itemQuantity" type="text" name="quantity">
     </div>
-    <div>
+    <div class="col-lg-2">
       $<span class="totalPrice">0.00</span>
     </div>
-    <div class="btn">
+    <div class="col-lg-2">
       <button type="button" class="btn btn-delete">Delete</button>
     </div>
-  </div>
+  </div> <!-- close .item .row div -->
 
-  <div class="item">
-    <div>
-      <span class="productName">Ironhack Baseball Cap</span>
+  <div class="item row">
+    <div class="col-lg-2">
+      <span class="productName">Ironhack Cap</span>
     </div>
-    <div>
+    <div class="col-lg-2">
         $<span class="costPerUnit">12.00</span>
     </div>
-    <div>
-      <form>
-        QTY <input class="itemQuantity" type="text" name="quantity">
-      </form>
+    <div class="col-lg-4">
+      QTY <input class="itemQuantity" type="text" name="quantity">
     </div>
-    <div>
+    <div class="col-lg-2">
       $<span class="totalPrice">0.00</span>
     </div>
-    <div class="btn">
+    <div class="col-lg-2">
       <button type="button" class="btn btn-delete">Delete</button>
     </div>
-  </div>
+  </div> <!-- close .item .row div -->
 
-  <div class="newItem">
-    <form>
-      <input class="itemName" type="text" name="quantity" placeholder="Item Name">
-    </form>
-    <form>
-      <input class="itemPrice" type="text" name="quantity" placeholder="Item Price">
-    </form>
-    <button type="button" class="btn" id="new-item-create">Create</button>
+
+<!-- New item inputs and create button -->
+<div class="newItem row" id="newItemLine">
+    <div class="col-lg-2">
+      <input class="newName" id="newName" type="text" name="ItemName" placeholder="Item Name">
     </div>
+    <div class="col-lg-2">
+      <input class="newPrice" id="newPrice" type="text" name="ItemPrice" placeholder="Item Price">
+    </div>
+    <div class="col-lg-2 col-lg-offset-6">
+      <button type="button" class="btn btn-success" id="new-item-create">Create</button>
+    </div>
+  </div> <!-- close .newItem .row div -->
 
-  <div class="btn calculate">
-      <button type="button" class="btn btn-success" id="calc-prices-button">Calculate Prices</button> 
+  <div class="calculate row">
+    <div class="col-lg-2 col-lg-offset-3">
+    <button type="button" class="btn btn-success" id="calc-prices-button">Calculate Prices</button> 
+    </div>
   </div>
 
-  <div class="finalTotal">
+  <div class="finalTotal row">
     <h2>Total Price: $<span>0</span></h2>
   </div>
 
+  </div> <!--Close body container-->
+
+  <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>
